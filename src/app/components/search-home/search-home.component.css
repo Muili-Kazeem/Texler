@@ -22,25 +22,25 @@ app-game-genre {
 }
 
 .games {
-  width: 98%;
+  width: 100%;
 }
 
 .game {
   background-color: var(--clr-drkblk2);
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .game-thumb__container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  padding: 15px;
 }
 
 .game-thumbnail {
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
   width: 50%;
   aspect-ratio: 16/9;
   object-fit: cover;
@@ -48,7 +48,7 @@ app-game-genre {
 }
 
 .game-description {
-  width: 45%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,11 +59,10 @@ app-game-genre {
   display: flex;
   gap: .3rem;
   text-transform: uppercase;
-  margin-bottom: .5rem;
 }
 
 .game-genres p {
-  font-size: .8rem;
+  font-size: .7rem;
   font-weight: 700;
   padding-right: .5rem;
   color: var(--clr-lgtwht2);
@@ -71,19 +70,18 @@ app-game-genre {
 
 .game-name {
   font-family: var(--ff-tertiary);
-  font-size: max(1.5rem, 5vh);
+  font-size: max(1.2rem, 4vh);
   letter-spacing: .5px;
-  line-height: 1.1;
+  line-height: .9;
   font-weight: 700;
-  margin-bottom: .5rem;
-  font-weight: 600;
+  margin: .8rem 0;
+  font-weight: 700;
 }
 
 .game-platforms {
   margin-left: .5rem;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
 
 .game-platforms img {
@@ -91,34 +89,9 @@ app-game-genre {
   margin-left: -.6rem;
   width: 30px;
   aspect-ratio: 1;
-  padding: 4px;
+  padding: 3px;
   border: 1px solid var(--clr-lgtwht2);
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-}
-
-.explore-link {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--clr-lgtwht);
-  width: 50%;
-  padding: .5rem 1rem;
-  border-radius: 5px;
-  color: var(--clr-drkblk);
-  margin-bottom: 1rem;
-}
-
-.explore-link a {
-  color: var(--clr-drkblk);
-  font-weight: 900;
-}
-
-.play_icon {
-  margin-left: .5rem;
-  font-size: 1.8rem;
-  height: 1.8rem;
-  width: 1.8rem;
 }
