@@ -1,0 +1,244 @@
+.game {
+  margin-top: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.game-trailers {
+  width: 20%;
+  aspect-ratio: 50/13;
+  position: relative;
+}
+
+.game-details {
+  width: 75%;
+  aspect-ratio: 16/9;
+  position: relative;
+  border-radius: 0px 20px 20px 0;
+}
+
+.game-banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px 20px 20px 0;
+}
+
+.background-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+}
+
+.game-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 1) );
+  border-radius: 0px 20px 20px 0;
+  z-index: 2;
+}
+
+.scene-screenshots {
+  width: 15%;
+  height: 55%;
+  position: absolute;
+  z-index: 15;
+  bottom: 2%;
+  right: 1%;
+}
+
+.scene-screenshots p {
+  position: absolute;
+  top: -6%;
+  left: 5%;
+  z-index: 20;
+  font-size: 1.4rem;
+}
+
+.screenshots {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: .5rem;
+  border-radius: 15px;
+}
+
+.screenshots::-webkit-scrollbar {
+  display: none;
+}
+
+.screenshot {
+  width: 100%;
+  aspect-ratio: 5/4;
+  object-fit: cover;
+  object-position: center;
+}
+
+.game-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.game-detail {
+  width: 70%;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+}
+
+.game-detail__information {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.game-detail__information span {
+  margin-right: 5px;
+}
+
+.game-detail__information .rating {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: green;
+  color: white;
+}
+
+.game-detail__information .year {
+}
+
+.game-detail__title {
+  font-size: 3rem;
+}
+
+.game-detail__description {
+  border-left: 2px solid var(--clr-lgtblue);
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.game-detail__genres {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.game-detail__genres .genre {
+  text-transform: uppercase;
+  padding: .3rem .5rem;
+  margin-right: .1rem;
+  border: rgb(167, 167, 167) solid 1px;
+}
+
+.game-detail__platforms {
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.play-game {
+  position: absolute;
+  bottom: 60%;
+  right: 25%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-game__link {
+  background: rgb(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.play-game__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 40px;
+}
+
+.play-game > p {
+  font-size: 16px;
+}
+
+.game-detail__platforms span {
+  margin-right: 2rem;
+}
+
+.trailers {
+  width: 100%;
+  height: 90%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trailers::-webkit-scrollbar {
+  display: none;
+}
+
+.trailer {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+}
+
+.game-trailers p {
+  margin-top: 20px;
+}
+
+.games-suggested {
+  margin-left: 2rem;
+  width: 80%;
+  display: flex;
+}
+
+.games-suggested__header {
+margin: 3rem 0 1rem 2rem;
+font-size: 2rem;
+font-weight: 600;
+}
+
+.suggested {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.suggest {
+  width: 20%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+}
+

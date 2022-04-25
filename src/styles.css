@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --ff-primary: 'Orbitron', sans-serif;
+  --ff-secondary: 'Quicksand', sans-serif;
+  --ff-tertiary: 'Urbanist', sans-serif;
+
+  --fw-reg: 300;
+  --fw-lightbold: 700;
+  --fw-bold: 800;
+
+  --fs-lg: 3rem;
+  --fs-md: 2.25rem;
+  --fs-mn: 1.25rem;
+  --fs-neo: 1rem;
+
+  --clr-drkblue: #0c0931;
+  --clr-drkblue2: #040415;
+  --clr-drkblk: #000000;
+  --clr-drkblk2: #111111;
+  --clr-lgtblk: #0D0f16;
+  --clr-lgtblk2: #1A1A1A;
+  --clr-lgtblk3: #292B2D;
+  --clr-wht: #ffffff;
+  --clr-lgtwht: #EEF3F3;
+  --clr-lgtwht2: #AFB4BD;
+  --clr-pink: #c5003b;
+  --clr-yellow: #FFE031;
+  --clr-lgtblue: #00FFED;
+  --clr-purple: #2e0039;
+}
+
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-drkblk);
+  color: white;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-neo);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 20px;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-lg: 4.5rem;
+    --fs-md: 3.75rem;
+    --fs-mn: 1.5rem;
+    --fs-neo: 1.125rem;
+  }
+}
