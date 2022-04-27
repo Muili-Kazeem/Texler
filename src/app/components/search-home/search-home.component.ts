@@ -26,9 +26,9 @@ export class SearchHomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this._routeSub = this._activatedRoute.params.subscribe((params: Params) => {
       if(params["game-search"]) {
-        this.searchGames("-rating", params["game-search"]);
+        this.searchGames("-metacritic", params["game-search"]);
       } else {
-        this.searchGames("-rating");
+        this.searchGames("-metacritic");
       }
     });
 

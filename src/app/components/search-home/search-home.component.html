@@ -23,34 +23,6 @@
     </div> -->
 
     <div class="games">
-      <!-- <ng-container *ngFor="let game of games"> -->
-        <div class="game">
-          <div class="game-thumb__container">
-            <img
-              src="../../../assets/taylor-r-BVi74hFpZfc-unsplash.jpg"
-              alt=""
-              class="game-thumbnail"
-            />
-            <!-- <p *ngIf="!game.background_image" class="game-thumbnail">No image</p> -->
-            <div class="game-description">
-              <!-- <div class="game-genres"> <p *ngFor="let genre of game.genres">{{genre.name}}</p></div> -->
-              <div class="game-genres"><p>Adventure</p><p>Racing</p></div>
-              <p class="game-name">The last of us all will be here to witness it all</p>
-              <div class="game-platforms">
-                <img
-                  src="../../../assets/images/platforms/xbox.svg"
-                  class="game-platform"
-                  alt=""
-                />
-                <img
-                src="../../../assets/images/platforms/xbox.svg"
-                class="game-platform"
-                alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="game">
           <div class="game-thumb__container">
@@ -71,7 +43,7 @@
                   alt=""
                 />
                 <img
-                src="../../../assets/images/platforms/xbox.svg"
+                src="../../../assets/images/platforms/commodore-amiga.svg"
                 class="game-platform"
                 alt=""
                 />
@@ -79,7 +51,32 @@
             </div>
           </div>
         </div>
-      <!-- </ng-container> -->
+
+        <ng-container *ngFor="let game of games" >
+          <div class="game">
+            <div class="game-thumb__container">
+              <img
+                *ngIf="game.background_image"
+                src="{{ game.background_image }}"
+                alt="thumbnail"
+                class="game-thumbnail"
+              />
+              <p *ngIf="!game.background_image" class="game-thumbnail">No thumbnail... Believe me</p>
+              <div class="game-description">
+                <div class="game-genres"><p *ngFor="let genre of game.genres">{{genre.name}}</p></div>
+                <p class="game-name">{{ game.name }}</p>
+                <div class="game-platforms">
+                  <img
+                    *ngFor="let platform of game.parent_platforms"
+                    src="../../../assets/images/platforms/{{ platform.platform.slug }}.svg"
+                    class="game-platform"
+                    alt="{{ platform.platform.slug }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
     </div>
   </div>
 </div>
